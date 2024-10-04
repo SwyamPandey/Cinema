@@ -4,7 +4,7 @@ const About = () => {
   document.title = "MovieDB | About";
 
   return (
-    <div className="bg-[#1A202C] min-h-screen px-8 py-12">
+    <div className="bg-[#1A202C] min-h-screen px-8 py-12 overflow-y-auto">
       <h1 className="text-5xl font-bold text-center text-white mb-8">About MovieDB</h1>
       
       <p className="text-lg text-gray-300 text-center mb-10">
