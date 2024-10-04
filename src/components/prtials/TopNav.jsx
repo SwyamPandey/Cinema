@@ -42,20 +42,15 @@ const TopNav = () => {
         {searches.map((s, i) => (
             <Link
               key={i}
-              // if(s.media_type=="person")
-              // {
-              //   s.media_type="people"
-              // }
-              // to={`/${s.media_type}/details/${s.id}`}
+              
               to={`/${s.media_type === "person" ? "people" : s.media_type}/details/${s.id}`}
               className="hover:text-black hover:bg-zinc-300 duration-300 font-semibold text-zinc-600 w-[100%] p-10 flex justify-start items-center border-b-2 border-zinc-100"
             >
             <img
-              src={`https://image.tmdb.org/t/p/original${
-                s.backdrop_path || s.profile_path
-              } ? https://image.tmdb.org/t/p/original${
-                s.backdrop_path || s.profile_path
-              } : /im.png`}
+              src={ s.backdrop_path || s.profile_path
+                             ? `https://image.tmdb.org/t/p/original${
+                                s.backdrop_path || s.profile_path
+                            }`  : "/no-image.png"}
               alt=""
               className="w-20 h-20 object-cover mr-2"
             />
